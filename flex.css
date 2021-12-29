@@ -1,0 +1,66 @@
+#boite {
+  height: 100px; /* hauteur */
+  width: 100%; /* largeur */
+  border: 1px solid black; /* solid ridge dashed thick double */
+  display: flex; /* on place cette propriété sur le parent, ==> les enfants sont sur la même ligne 
+    quand on utilise le flex on doit obligatoire avoir cette propriété
+    */
+  flex-direction: row-reverse;
+  /* flex-direction : row par défaut c'est dans l'ordre gauche à droite 
+    row-reverse de droite à gauche
+    column du haut vers le bas
+    */
+  justify-content: space-evenly;
+  /* par défaut : flex-start (tout à gauche)
+       flex-end : tout à droite
+       center : centré
+       space-around : espace autour (de chaque côté meme taille et entre autre taille
+       space-between : espace entre les boîtes
+       space-evenly : space-around qui a les memes espacement entre et autour extérieur
+
+       attention ça fonctionne uniquement s'il y a de l'espace entre les boîtes
+    
+    */
+
+  align-items: center;
+  /* par défaut : flex-start (tout par le haut)
+       flex-end : tout par le bas
+       center : centrage par le milieu
+
+    
+    */
+
+  flex-wrap: wrap;
+  /* retour à la ligne quand il n'y a plus de place */
+}
+
+.boitesInterieures {
+  /* les div qui se trouvent dans la div id boite */
+  width: 25%;
+  height: 100px;
+}
+
+.boitesInterieures2 {
+  /* les div qui se trouvent dans la div id boite */
+  width: 20%;
+  height: 70px;
+}
+
+/* classe commune */
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+  align-self: flex-start;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
